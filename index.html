@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TrueDose – check your medicine before you take it</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div><div class="wash" aria-hidden="true"></div>
+<button class="menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="side"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <a class="brand" href="#home"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 2c0 8 14 8 14 11s-14 3-14 11"/><path d="M20 2c0 8-14 8-14 11s14 3 14 11"/></svg>True<span>Dose</span></a>
+  <nav aria-label="Main">
+    <a href="#home"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Home</a>
+    <a href="#check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Check</a>
+    <a href="#pharmacies"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Pharmacies</a>
+    <a href="#report"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>Report</a>
+    <a href="#learn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 19a2 2 0 012-2h13"/></svg>Learn</a>
+    <a href="#about"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>About</a>
+  </nav>
+  <p class="side-note">General information only, not medical advice.</p>
+</aside>
+<div class="wrap">
+
+<main>
+<!-- HOME -->
+<section class="page" id="pg-home">
+  <div class="hero">
+    <h1>Is your medicine real? Check before you take it.</h1>
+    <p class="lead">Compare the pack in your hand against NAFDAC’s official records, find a pharmacy near you, and report anything that looks fake.</p>
+    <div class="btns"><a class="btn" href="#check">Check a medicine</a><a class="btn ghost" href="#pharmacies">Find a pharmacy</a></div>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="#check"><b>Check</b><span>Run six quick checks on any pack.</span></a>
+    <a class="tile" href="#pharmacies"><b>Pharmacies</b><span>Search by area and compare prices.</span></a>
+    <a class="tile" href="#report"><b>Report</b><span>Log a suspect product and alert NAFDAC.</span></a>
+    <a class="tile" href="#learn"><b>Learn</b><span>Spot fakes, buy safely, store medicines.</span></a>
+  </div>
+  <div class="panel">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><b>Look up the number.</b> Search the registration number from the pack in NAFDAC’s Greenbook.</li>
+      <li><b>Compare the details.</b> The name, maker and strength must match the pack, not just the number.</li>
+      <li><b>Act on the result.</b> If anything is off, keep the pack, don’t use it and report it.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- CHECK -->
+<section class="page" id="pg-check" hidden>
+  <div class="ptitle"><h1>Check a medicine</h1><p class="lead">Six checks you can do at the counter or at home.</p></div>
+  <div class="panel">
+    <label for="q">NAFDAC number or product name</label>
+    <input class="big" type="text" id="q" placeholder="e.g. 04-1234 or Paracetamol 500mg" autocomplete="off">
+    <div class="btns"><a class="btn" href="https://greenbook.nafdac.gov.ng" target="_blank" rel="noopener">Open NAFDAC Greenbook</a></div>
+    <p class="note">Search the Greenbook with the number on the pack, then tick what matches below.</p>
+    <fieldset id="ck">
+      <legend>Compare the pack in your hand</legend>
+      <label class="chk"><input type="checkbox"> The Greenbook entry shows the same product name, maker and strength as the pack.</label>
+      <label class="chk"><input type="checkbox"> The seal and box are intact, with sharp printing and no spelling mistakes.</label>
+      <label class="chk"><input type="checkbox"> Batch number, manufacture date and expiry date are printed clearly.</label>
+      <label class="chk"><input type="checkbox"> The pack has no scratch panel, or its code came back genuine by SMS.</label>
+      <label class="chk"><input type="checkbox"> I bought it from a registered pharmacy that displays its licence.</label>
+      <label class="chk"><input type="checkbox"> The price is in the normal range, not suspiciously cheap.</label>
+    </fieldset>
+    <div class="btns"><button class="btn" id="go" type="button">See result</button></div>
+    <div id="out" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- PHARMACIES -->
+<section class="page" id="pg-pharmacies" hidden>
+  <div class="ptitle"><h1>Find a pharmacy</h1><p class="lead">Search by area and medicine, cheapest first.</p></div>
+  <div class="panel">
+    <div class="row">
+      <div><label for="area">Area</label>
+        <select id="area"><option value="">All of Lagos</option><option>Ikeja</option><option>Lekki</option><option>Yaba</option><option>Surulere</option><option>Ikorodu</option></select></div>
+      <div><label for="med">Medicine</label>
+        <input type="text" id="med" placeholder="e.g. amoxicillin" autocomplete="off"></div>
+    </div>
+    <p class="note">Sample listings for design only. Replace them with pharmacies you have verified before launch.</p>
+    <div id="plist"></div>
+  </div>
+</section>
+
+<!-- REPORT -->
+<section class="page" id="pg-report" hidden>
+  <div class="ptitle"><h1>Report a fake</h1><p class="lead">Record what you found, then send the official report to NAFDAC.</p></div>
+  <div class="panel">
+    <form id="rf" class="stack" novalidate>
+      <div><label for="rp">Product name</label><input type="text" id="rp" required placeholder="Name and strength on the pack"></div>
+      <div class="row">
+        <div><label for="rn">NAFDAC number</label><input type="text" id="rn" placeholder="If printed"></div>
+        <div><label for="ra">Where did you buy it?</label><input type="text" id="ra" placeholder="Area or shop name"></div>
+      </div>
+      <div><label for="rw">What looked wrong?</label>
+        <select id="rw"><option>Number not found in Greenbook</option><option>Number belongs to a different product</option><option>Poor or misspelled printing</option><option>Scratch code failed</option><option>Broken seal or odd smell or colour</option><option>Other</option></select></div>
+      <div><label for="rd">Details</label><textarea id="rd" placeholder="Batch number, price paid, anything else"></textarea></div>
+      <div class="btns" style="margin-top:0"><button class="btn" type="submit">Save report</button>
+      <a class="btn ghost" href="https://greenbook.nafdac.gov.ng/report/sf" target="_blank" rel="noopener">Report to NAFDAC</a></div>
+    </form>
+    <div id="rmsg" aria-live="polite"></div>
+    <p class="note">Saving here keeps a record on this device only. Send the official report to NAFDAC so they can act on it.</p>
+    <div id="rlist"></div>
+  </div>
+</section>
+
+<!-- LEARN -->
+<section class="page" id="pg-learn" hidden>
+  <div class="ptitle"><h1>Learn</h1><p class="lead">Short guides for safer buying and use.</p></div>
+  <div class="panel">
+    <details open><summary>Signs a pack may be fake</summary>
+      <ul><li>Spelling mistakes, blurry print or colours that look off.</li><li>No registration number, or a number that belongs to a different product.</li><li>Missing or smudged batch number and expiry date.</li><li>Damaged, resealed or loose packaging.</li><li>Tablets that differ in colour, shape or smell from your usual pack.</li><li>A price far below other pharmacies.</li></ul></details>
+    <details><summary>How the scratch-code check works</summary>
+      <p>Some products, mainly antimalarials and certain antibiotics, carry a scratch panel. Scratch it at the point of purchase, then text the code to the short code printed on the pack. The reply tells you whether the pack is genuine or suspicious.</p></details>
+    <details><summary>Buying medicine safely</summary>
+      <ul><li>Buy from a registered pharmacy that displays its licence.</li><li>Avoid hawkers, buses and open markets.</li><li>Ask the pharmacist for the brand, strength and how to take it.</li><li>Keep the pack and receipt until the course is finished.</li></ul></details>
+    <details><summary>Storing medicines at home</summary>
+      <ul><li>Keep them in the original pack, in a cool, dry place away from direct sun.</li><li>Keep them out of reach of children.</li><li>Check expiry dates regularly and do not use expired medicines.</li><li>Do not share prescription medicines with other people.</li></ul></details>
+    <details><summary>If you have already taken a suspect medicine</summary>
+      <p>Stop using it and keep the pack. If you feel unwell, speak to a doctor or pharmacist, and get emergency care for severe symptoms. Then report the product to NAFDAC.</p></details>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="page" id="pg-about" hidden>
+  <div class="ptitle"><h1>About TrueDose</h1><p class="lead">A simple way to check medicines in Nigeria.</p></div>
+  <div class="panel">
+    <h2>What it does</h2>
+    <p>TrueDose guides you through checking a medicine against NAFDAC’s official Greenbook, helps you find pharmacies, and makes it easy to report suspected fakes.</p>
+    <h2>What it does not do</h2>
+    <p>TrueDose is not a lab test and cannot confirm a pack is genuine on its own. It is not affiliated with NAFDAC and does not give medical advice.</p>
+    <h2>For pharmacies</h2>
+    <p>Verified pharmacy listings are planned. The pharmacies shown today are sample data for design only.</p>
+  </div>
+</section>
+</main>
+
+<footer>TrueDose gives general information and is not medical advice. If you feel unwell after taking a medicine, see a doctor or pharmacist.</footer>
+</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/helix.js"></script>
+</body>
+</html>
